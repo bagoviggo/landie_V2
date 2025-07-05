@@ -27,6 +27,23 @@ export interface Property {
   updatedAt: Date;
 }
 
+// Type for flat SQL result
+export type PropertyRow = {
+  propertyId: string;
+  title: string;
+  description: string;
+  "location.address": string;
+  "location.latitude": number;
+  "location.longitude": number;
+  price: number;
+  type: string;
+  size: number;
+  amenities: string;
+  images: string;
+  createdAt: string;
+  updatedAt: string;
+};
+
 export interface Lease {
   leaseId: string;
   propertyId: string;
@@ -57,3 +74,4 @@ export interface Review {
   comment: string;
   createdAt: Date;
 }
+
