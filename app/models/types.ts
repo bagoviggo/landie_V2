@@ -1,4 +1,4 @@
-// Flat type for SQL result mapping for Property
+// Flat row types for SQL mapping (for API routes)
 export type PropertyRow = {
   propertyId: string;
   title: string;
@@ -15,7 +15,6 @@ export type PropertyRow = {
   updatedAt: string;
 };
 
-// Flat type for SQL result mapping for Lease
 export type LeaseRow = {
   leaseId: string;
   propertyId: string;
@@ -24,6 +23,16 @@ export type LeaseRow = {
   endDate: string;
   monthlyRent: number;
   paymentFrequency: string;
+  createdAt: string;
+  updatedAt: string;
+};
+
+export type MaintenanceRequestRow = {
+  requestId: string;
+  propertyId: string;
+  tenantId: string;
+  description: string;
+  status: string;
   createdAt: string;
   updatedAt: string;
 };
@@ -55,8 +64,6 @@ export interface Property {
   createdAt: Date;
   updatedAt: Date;
 }
-
-
 
 export interface Lease {
   leaseId: string;
