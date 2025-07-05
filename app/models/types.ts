@@ -1,3 +1,32 @@
+// Flat type for SQL result mapping for Property
+export type PropertyRow = {
+  propertyId: string;
+  title: string;
+  description: string;
+  "location.address": string;
+  "location.latitude": number;
+  "location.longitude": number;
+  price: number;
+  type: string;
+  size: number;
+  amenities: string;
+  images: string;
+  createdAt: string;
+  updatedAt: string;
+};
+
+// Flat type for SQL result mapping for Lease
+export type LeaseRow = {
+  leaseId: string;
+  propertyId: string;
+  tenantId: string;
+  startDate: string;
+  endDate: string;
+  monthlyRent: number;
+  paymentFrequency: string;
+  createdAt: string;
+  updatedAt: string;
+};
 // Core data models for the Property Management System (PMS)
 
 export interface User {
@@ -27,22 +56,7 @@ export interface Property {
   updatedAt: Date;
 }
 
-// Type for flat SQL result
-export type PropertyRow = {
-  propertyId: string;
-  title: string;
-  description: string;
-  "location.address": string;
-  "location.latitude": number;
-  "location.longitude": number;
-  price: number;
-  type: string;
-  size: number;
-  amenities: string;
-  images: string;
-  createdAt: string;
-  updatedAt: string;
-};
+
 
 export interface Lease {
   leaseId: string;
@@ -55,6 +69,8 @@ export interface Lease {
   createdAt: Date;
   updatedAt: Date;
 }
+
+
 
 export interface MaintenanceRequest {
   requestId: string;
