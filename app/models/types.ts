@@ -1,3 +1,11 @@
+export type ReviewRow = {
+  reviewId: string;
+  propertyId: string;
+  userId: string;
+  rating: number;
+  comment: string;
+  createdAt: string;
+};
 // Flat row types for SQL mapping (for API routes)
 export type PropertyRow = {
   propertyId: string;
